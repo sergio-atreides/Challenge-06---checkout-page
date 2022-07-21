@@ -25,20 +25,44 @@ $button-text: #FFFFFF;
     font-family: $font;
     font-weight: 600;
     font-size: 18px;
+    max-width: 1500px;
+    @media (min-width: 1000px) {
+        width: 80vw;
+        margin: 0 auto;
+    }
 }
-.Header {
-    width: 90vw;
-    color: $title-color;
-    font-size: 1em;
-    margin: 20px auto 0 auto;
+.Main {
+    display: grid;
+    grid-template-areas: "cart"
+                        "contact";
+    @media (min-width: 1000px) {
+        grid-template-areas: "contact cart";
+    }
 }
 
 /* ---------------------   CART   --------------------- */
-.H1,.H2 {
+.Header {
+    width: 90%;
+    margin: 30px auto 0 auto;
+    font-size: 1em;
+    color: $title-color;
+    @media (min-width: 1000px) {
+        margin: 30px 0 0 25px;
+    }
+}
+.H1, .H2 {
     margin: 2em 0 1em 0;
 }
+.H1 {
+    @media (min-width: 1000px) {
+        font-size: 2em;
+    }
+}
+.ShopingCart {
+    grid-area: cart;
+}
 .Cart {
-    @include flexible(90vw,column,center,center);
+    @include flexible(90%,column,center,center);
     border-radius: 1em;
     padding: 25px;
     margin: 0 auto;
@@ -113,17 +137,37 @@ $button-text: #FFFFFF;
     text-align: end;
 }
 /* -------------------   CONTACT   ------------------- */
+.Subheader {
+    width: 100%;
+    color: $title-color;
+    margin: 15px auto 0 auto;
+    @media (min-width: 1000px) {
+        margin: 0 auto;
+    }
+}
 .Contact {
     @include flexible(90%,column,start,start);
+    grid-area: contact;
     margin: 0 auto;
 }
-.H2 {
+.H2,
+.ShippingH2 {
     color: $price-color;
     font-size: .8em;
+    @media (min-width: 1000px) {
+        margin: 0 0 1em 0;
+        font-size: 1em;
+    }
+}
+.ShippingH2 {
+    margin-top: 25px;
 }
 .ContactLabel {
     font-size: .6em;
     color: $contact-color;
+    @media (min-width: 1000px) {
+        font-size: .7em;
+    }
 }
 .ContactInput {
     @include flexible(100%,row,start,center);
@@ -134,6 +178,10 @@ $button-text: #FFFFFF;
     border-radius: 10px;
     padding: 9px;
     margin-bottom: .9em;
+    @media (min-width: 1000px) {
+        font-size: 1em;
+        padding: 10px;
+    }
 }
 
 .ContactInputIco {

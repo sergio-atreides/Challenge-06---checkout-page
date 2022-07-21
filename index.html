@@ -8,113 +8,113 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
 </head>
-<body class="Body">    
-
-    <section class="ShoppingCart">
-        <header class="Header">
-            <h1 class="H1">Checkout</h1>
-        </header>
-        <div class="Cart">
-            <div class="CartItem">
-                <picture>
-                    <source srcset="assets/photo1-min.png" media="(min-width: 1000px)">
-                    <img src="assets/photo1-small-min.png" alt="Vintage Backpack" title="Vintage Backpack" loading="lazy"/>
-                </picture>
-                <div class="CartItemData">
-                    <p class="CartItemName">Vintage Backpack</p>
-                    <div class="CartItemPrices">
-                        <p class="CartItemPrice">$54.99</p>
-                        <p class="CartItemOldPrice">$94.99</p>
-                    </div>
-                    <div class="QBox">
-                        <button class="QButton">-</button>
-                        <p class="QText">1</p>
-                        <button class="QButton">+</button>
-                    </div>
-                </div>
-            </div>
-            <div class="CartItem">
-                <picture>
-                    <source srcset="assets/photo2-min.png" media="(min-width: 1000px)">
-                    <img src="assets/photo2-small-min.png" alt="Levi Shoes" title="Levi Shoes" loading="lazy"/>
-                </picture>
-                <div class="CartItemData">
-                    <p class="CartItemName">Levi Shoes</p>
-                    <div class="CartItemPrices">
-                        <p class="CartItemPrice">$74.99</p>
-                        <p class="CartItemOldPrice">$124.99</p>
-                    </div>
-                    <div class="QBox">
-                        <button class="QButton">-</button>
-                        <p class="QText">1</p>
-                        <button class="QButton">+</button>
+<body class="Body">
+    <header class="Header">
+        <h1 class="H1">Checkout</h1>
+    </header>
+    <main class="Main">
+        <div class="ShoppingCart">
+            <div class="Cart">
+                <div class="CartItem">
+                    <picture>
+                        <source srcset="assets/photo1-min.png" media="(min-width: 1000px)">
+                        <img src="assets/photo1-small-min.png" alt="Vintage Backpack" title="Vintage Backpack" loading="lazy"/>
+                    </picture>
+                    <div class="CartItemData">
+                        <p class="CartItemName">Vintage Backpack</p>
+                        <div class="CartItemPrices">
+                            <p class="CartItemPrice">$54.99</p>
+                            <p class="CartItemOldPrice">$94.99</p>
+                        </div>
+                        <div class="QBox">
+                            <button class="QButton">-</button>
+                            <p class="QText">1</p>
+                            <button class="QButton">+</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="Price">
-                <p class="PriceText">Shipping</p>
-                <p class="PriceCost">$19</p>
-            </div>
+                <div class="CartItem">
+                    <picture>
+                        <source srcset="assets/photo2-min.png" media="(min-width: 1000px)">
+                        <img src="assets/photo2-small-min.png" alt="Levi Shoes" title="Levi Shoes" loading="lazy"/>
+                    </picture>
+                    <div class="CartItemData">
+                        <p class="CartItemName">Levi Shoes</p>
+                        <div class="CartItemPrices">
+                            <p class="CartItemPrice">$74.99</p>
+                            <p class="CartItemOldPrice">$124.99</p>
+                        </div>
+                        <div class="QBox">
+                            <button class="QButton">-</button>
+                            <p class="QText">1</p>
+                            <button class="QButton">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Price">
+                    <p class="PriceText">Shipping</p>
+                    <p class="PriceCost">$19</p>
+                </div>
 
-            <div class="Price">
-                <p class="PriceText">Total</p>
-                <p class="PriceCost">$148.98</p>
+                <div class="Price">
+                    <p class="PriceText">Total</p>
+                    <p class="PriceCost">$148.98</p>
+                </div>
             </div>
         </div>
-    </section>
-    <form class="Contact" action="" method="post">
-
-        <header class="Header">
-            <h2 class="H2">Contact information</h2>
-        </header>
-        <label for="email" class="ContactLabel">E-mail</label>
-        <div class="ContactInput">
-            <img class="ContactInputIco" src="assets/email-ico.svg" alt="Email">
-            <input type="email" class="ContactInputControl" placeholder="Enter your email..." id="email">
-        </div>
-        <label for="phone" class="ContactLabel">Phone</label>
-        <div class="ContactInput">
-            <img class="ContactInputIco" src="assets/phone-ico.svg" alt="Phone">
-            <input type="phone" class="ContactInputControl" placeholder="Enter your phone..." id="phone">
-        </div>
-        <h2 class="H2">Shipping address</h2>
-        <label for="name" class="ContactLabel">Full name</label>
-        <div class="ContactInput">
-            <img class="ContactInputIco" src="assets/name-ico.svg" alt="Full name">
-            <input type="text" class="ContactInputControl isActive" placeholder="Rodney Cotton" id="name">
-        </div>
-        <label for="address" class="ContactLabel">Address</label>
-        <div class="ContactInput">
-            <img class="ContactInputIco" src="assets/address-ico.svg" alt="Addres">
-            <input type="text" class="ContactInputControl" placeholder="Your address..." id="address">
-        </div>
-        <label for="city" class="ContactLabel">City</label>
-        <div class="ContactInput">
-            <img class="ContactInputIco" src="assets/city-ico.svg" alt="City">
-            <input type="text" class="ContactInputControl" placeholder="Your city..." id="city">
-        </div>
-        <div class="ControlContainer">
-            <label for="country" class="ContactLabel">Country</label>
-            <label for="postalcode" class="ContactLabel">Postal Code</label>
+        <form class="Contact" action="" method="post">
+            <header class="Subheader">
+                <h2 class="H2">Contact information</h2>
+            </header>
+            <label for="email" class="ContactLabel">E-mail</label>
             <div class="ContactInput">
-                <img class="ContactInputIco" src="assets/city-ico.svg" alt="Country">
-                <select id="country" class="ContactInputControl" placeholder="Your country...">
-                    <option value="" selected>Your country...</option>
-                    <option value="value2" >Value 2</option>
-                    <option value="value3">Value 3</option>
-                </select>
+                <img class="ContactInputIco" src="assets/email-ico.svg" alt="Email">
+                <input type="email" class="ContactInputControl" placeholder="Enter your email..." id="email">
             </div>
+            <label for="phone" class="ContactLabel">Phone</label>
             <div class="ContactInput">
-                <img class="ContactInputIco" src="assets/postal-ico.svg" alt="Postal Code">
-                <input type="number" class="ContactInputControl" placeholder="Your postal code..." id="postalcode">
+                <img class="ContactInputIco" src="assets/phone-ico.svg" alt="Phone">
+                <input type="phone" class="ContactInputControl" placeholder="Enter your phone..." id="phone">
             </div>
-        </div>
-        <div class="CheckContainer">
-            <input type="checkbox" class="ContactCheckControl" id="saveinfo">
-            <label for="saveinfo" class="ContactLabel">Save this information for next time</label>
-        </div>
-        <button class="ContinueButton">Continue</button>
-    </form>
+            <h2 class="ShippingH2">Shipping address</h2>
+            <label for="name" class="ContactLabel">Full name</label>
+            <div class="ContactInput">
+                <img class="ContactInputIco" src="assets/name-ico.svg" alt="Full name">
+                <input type="text" class="ContactInputControl isActive" placeholder="Rodney Cotton" id="name">
+            </div>
+            <label for="address" class="ContactLabel">Address</label>
+            <div class="ContactInput">
+                <img class="ContactInputIco" src="assets/address-ico.svg" alt="Addres">
+                <input type="text" class="ContactInputControl" placeholder="Your address..." id="address">
+            </div>
+            <label for="city" class="ContactLabel">City</label>
+            <div class="ContactInput">
+                <img class="ContactInputIco" src="assets/city-ico.svg" alt="City">
+                <input type="text" class="ContactInputControl" placeholder="Your city..." id="city">
+            </div>
+            <div class="ControlContainer">
+                <label for="country" class="ContactLabel">Country</label>
+                <label for="postalcode" class="ContactLabel">Postal Code</label>
+                <div class="ContactInput">
+                    <img class="ContactInputIco" src="assets/city-ico.svg" alt="Country">
+                    <select id="country" class="ContactInputControl" placeholder="Your country...">
+                        <option value="" selected>Your country...</option>
+                        <option value="value2" >Value 2</option>
+                        <option value="value3">Value 3</option>
+                    </select>
+                </div>
+                <div class="ContactInput">
+                    <img class="ContactInputIco" src="assets/postal-ico.svg" alt="Postal Code">
+                    <input type="number" class="ContactInputControl" placeholder="Your postal code..." id="postalcode">
+                </div>
+            </div>
+            <div class="CheckContainer">
+                <input type="checkbox" class="ContactCheckControl" id="saveinfo">
+                <label for="saveinfo" class="ContactLabel">Save this information for next time</label>
+            </div>
+            <button class="ContinueButton">Continue</button>
+        </form>
+    </main>   
     <footer class="Footer">
         <p class="Footer-p">created by <a href="https://github.com/sergio-atreides" class="Footer-a" target="_blank">Sergio Atreides</a> - devChallenges.io</p>
     </footer>
