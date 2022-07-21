@@ -1,0 +1,193 @@
+@import '_reset';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+$font: 'Montserrat', sans-serif;
+$title-color: #4E5150;
+$highlight-color: #F2994A;
+$price-color: #333333;
+$q-lines: #828282;
+$total-lines-color: #BDBDBD;
+$cart-bg: #F2F2F2;
+$contact-color: #4F4F4F;
+$qbutton-bg: #E0E0E0;
+$button-text: #FFFFFF;
+
+@mixin flexible ($width,$direction,$alignx,$aligny) {
+    display: flex;
+    width: $width;
+    flex-direction: $direction;
+    justify-content: $alignx;
+    align-items: $aligny;
+    flex-wrap: nowrap;
+}
+
+.Body {
+    font-family: $font;
+    font-weight: 600;
+    font-size: 18px;
+}
+.Header {
+    width: 90vw;
+    color: $title-color;
+    font-size: 1em;
+    margin: 20px auto 0 auto;
+}
+
+/* ---------------------   CART   --------------------- */
+.H1,.H2 {
+    margin: 2em 0 1em 0;
+}
+.Cart {
+    @include flexible(90vw,column,center,center);
+    border-radius: 1em;
+    padding: 25px;
+    margin: 0 auto;
+    background-color: $cart-bg;
+}
+.CartItem {
+    @include flexible(100%,row,start,start);
+    height: 135px;
+    & picture {
+        width: auto;
+        margin-right: 1em;
+        & img {
+            border-radius: 1em;
+            height: 110px;
+            width: 110px;
+        }
+    }
+}
+.CartItemData {
+    display: grid;
+    height: 110px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+.CartItemName {
+    color: $title-color;
+    font-size: .65em;
+}
+.CartItemPrices {
+    @include flexible(auto,row,start,center);
+}
+.CartItemPrice {
+    color: $highlight-color;
+    font-size: .9em;
+    margin-right: .55em;
+}
+.CartItemOldPrice {
+    color: $title-color;
+    font-size: .7em;
+    text-decoration: line-through;
+}
+.QBox {
+    @include flexible(auto,row,start,center);
+    padding: 0 10px 0 10px;
+    border: 1px solid $q-lines;
+    border-radius: 8px;
+    height: 37px;
+    align-self: end;
+    justify-content: space-between;
+}
+.QButton {
+    @include flexible(100%,row,center,center);
+    border-radius: 4px;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: $qbutton-bg;
+    color: $q-lines;
+}
+.Price {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    border-top: 1px solid $total-lines-color;
+    padding: .6em 0;
+    font-size: .8em;
+    & p {
+        color: $price-color;
+    }
+}
+.PriceCost {
+    text-align: end;
+}
+/* -------------------   CONTACT   ------------------- */
+.Contact {
+    @include flexible(90%,column,start,start);
+    margin: 0 auto;
+}
+.H2 {
+    color: $price-color;
+    font-size: .8em;
+}
+.ContactLabel {
+    font-size: .6em;
+    color: $contact-color;
+}
+.ContactInput {
+    @include flexible(100%,row,start,center);
+    width: 100%;
+    font-size: .7em;
+    color: $q-lines;
+    border: 1px solid $q-lines;
+    border-radius: 10px;
+    padding: 9px;
+    margin-bottom: .9em;
+}
+
+.ContactInputIco {
+    width: 1.5em;
+    height: 1.5em;
+}
+.ContactInputControl {
+    width: 100%;
+    margin-left: .6em;
+    &:focus {
+        outline: none;
+    }
+    &::placeholder {
+        color: $q-lines;
+    }
+}
+.ContactCheckControl {
+    margin-right: .6em;
+    &:focus {
+        outline: none;
+    }
+}
+.isActive::placeholder {
+    color: $price-color;
+}
+.ControlContainer {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 1em;
+}
+.CheckContainer {
+    @include flexible(auto,row,start,center);
+}
+.ContinueButton {
+    margin: 10px 0 35px 0;
+    align-self: end;
+    padding: .8em 2.2em;
+    color: $button-text;
+    background-color: $highlight-color;
+    border-radius: .7em;
+    font-size: .9em;
+}
+.Footer {
+    width: 100%;
+    &-p {
+        text-align: center;
+        color: $total-lines-color;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    &-a {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+}
